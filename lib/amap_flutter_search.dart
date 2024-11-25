@@ -63,6 +63,8 @@ class AmapFlutterSearch {
       'types': types
     });
 
+    print("searchKeyword $dataList");
+
     // return dataList ?? [];
     return dataList?.map((e) {
           return AMapPoi.fromJson(e);
@@ -130,5 +132,4 @@ class AmapFlutterSearch {
   //   final String? version = await _channel.invokeMethod('searchReGeocode');
   //   return version;
   // }
-
 }
