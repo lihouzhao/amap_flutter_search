@@ -17,7 +17,7 @@ class AMapPoi {
   String? city;
   String? citycode;
   String? direction;
-  int? distance;
+  double? distance;
   String? district;
   String? email;
   String? gridcode;
