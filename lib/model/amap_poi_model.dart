@@ -26,23 +26,26 @@ class AMapPoi {
   String? name;
   String? parkingType;
   String? pcode;
+  String? province;
 
-  AMapPoi(
-      {this.adcode,
-      this.address,
-      this.businessArea,
-      this.city,
-      this.citycode,
-      this.direction,
-      this.distance,
-      this.district,
-      this.email,
-      this.gridcode,
-      this.hasIndoorMap,
-      this.location,
-      this.name,
-      this.parkingType,
-      this.pcode});
+  AMapPoi({
+    this.adcode,
+    this.address,
+    this.businessArea,
+    this.city,
+    this.citycode,
+    this.direction,
+    this.distance,
+    this.district,
+    this.email,
+    this.gridcode,
+    this.hasIndoorMap,
+    this.location,
+    this.name,
+    this.parkingType,
+    this.pcode,
+    this.province,
+  });
 
   AMapPoi.fromJson(Map json) {
     json = Map<String, dynamic>.from(json);
@@ -62,6 +65,7 @@ class AMapPoi {
     name = json["name"];
     parkingType = json["parkingType"];
     pcode = json["pcode"];
+    province = json["province"];
   }
 
   Map<String, dynamic> toJson() {
@@ -81,6 +85,7 @@ class AMapPoi {
     data["name"] = name;
     data["parkingType"] = parkingType;
     data["pcode"] = pcode;
+    data["province"] = province;
     return data;
   }
 }
