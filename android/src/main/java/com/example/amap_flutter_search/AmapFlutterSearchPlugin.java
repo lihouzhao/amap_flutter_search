@@ -140,6 +140,12 @@ public class AmapFlutterSearchPlugin implements FlutterPlugin, MethodCallHandler
       poiSearch = new PoiSearch(mContext,query);
       poiSearch.setOnPoiSearchListener(this);
       poiSearch.searchPOIAsyn();
+          // 打印 result 对象
+        if (result != null) {
+            System.out.println(result.toString());
+        } else {
+            System.out.println("Result is null");
+        }
       resultCallback = result;
     }
   }
