@@ -46,7 +46,7 @@ class AmapFlutterSearch {
   /// 关键字搜索poi
   ///
   /// 在城市[city]搜索关键字[keyword]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
-  static Future<List<AMapPoi>> searchKeyword(
+  static Future<List<AMapPoiCode>> searchKeyword(
     String keyword, {
     String city = '',
     String types = '',
@@ -63,11 +63,9 @@ class AmapFlutterSearch {
       'types': types
     });
 
-    print("searchKeyword $dataList");
-
     // return dataList ?? [];
     return dataList?.map((e) {
-          return AMapPoi.fromJson(e);
+          return AMapPoiCode.fromJson(e);
         }).toList() ??
         [];
   }
@@ -75,7 +73,7 @@ class AmapFlutterSearch {
   /// 周边搜索poi
   ///
   /// 在中心点[center]周边搜索关键字[keyword]和城市[city]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
-  static Future<List<AMapPoi>> searchAround(
+  static Future<List<AMapPoiCode>> searchAround(
     Location center, {
     String keyword = '',
     String city = '',
@@ -95,7 +93,7 @@ class AmapFlutterSearch {
       'latitude': center.latitude
     });
     return dataList?.map((e) {
-          return AMapPoi.fromJson(e);
+          return AMapPoiCode.fromJson(e);
         }).toList() ??
         [];
   }

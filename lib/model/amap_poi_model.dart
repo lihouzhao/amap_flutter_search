@@ -10,7 +10,7 @@
 
 import 'package:amap_flutter_search/model/amap_geocode.dart';
 
-class AMapPoi {
+class AMapPoiCode {
   String? adcode;
   String? address;
   String? businessArea;
@@ -28,7 +28,7 @@ class AMapPoi {
   String? pcode;
   String? province;
 
-  AMapPoi({
+  AMapPoiCode({
     this.adcode,
     this.address,
     this.businessArea,
@@ -47,7 +47,7 @@ class AMapPoi {
     this.province,
   });
 
-  AMapPoi.fromJson(Map json) {
+  AMapPoiCode.fromJson(Map json) {
     json = Map<String, dynamic>.from(json);
     adcode = json["adcode"];
     address = json["address"];

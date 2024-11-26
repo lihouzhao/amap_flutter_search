@@ -68,7 +68,7 @@ class YZHomePage extends StatefulWidget {
 
 class _YZHomePageState extends State<YZHomePage> {
   String _platformVersion = 'Unknown';
-  List<AMapPoi> dataList = [];
+  List<AMapPoiCode> dataList = [];
   late TextEditingController textEditingController;
 
   @override
