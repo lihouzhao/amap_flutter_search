@@ -55,7 +55,11 @@ class AMapPoi {
     city = json["city"];
     citycode = json["citycode"];
     direction = json["direction"];
-    distance = json["distance"];
+    distance = json["distance"] != null
+        ? (json["distance"] is int
+            ? (json["distance"] as int).toDouble()
+            : json["distance"] as double)
+        : null;
     district = json["district"];
     email = json["email"];
     gridcode = json["gridcode"];
