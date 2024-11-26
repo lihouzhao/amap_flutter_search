@@ -198,7 +198,7 @@ public class AmapFlutterSearchPlugin implements FlutterPlugin, MethodCallHandler
       poiMap.put("name",item.getTitle());
       poiMap.put("parkingType",item.getParkingType());
       poiMap.put("pcode",item.getProvinceCode());
-      poiMap.put("province", item.getProvinceName())
+      poiMap.put("province", item.getProvinceName());
       pois.add(poiMap);
     }
     resultCallback.success(pois);
