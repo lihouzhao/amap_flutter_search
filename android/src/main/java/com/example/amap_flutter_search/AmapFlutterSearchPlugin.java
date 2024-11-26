@@ -140,12 +140,6 @@ public class AmapFlutterSearchPlugin implements FlutterPlugin, MethodCallHandler
       poiSearch = new PoiSearch(mContext,query);
       poiSearch.setOnPoiSearchListener(this);
       poiSearch.searchPOIAsyn();
-          // 打印 result 对象
-        if (result != null) {
-            System.out.println(result.toString());
-        } else {
-            System.out.println("Result is null");
-        }
       resultCallback = result;
     }
   }
@@ -204,6 +198,7 @@ public class AmapFlutterSearchPlugin implements FlutterPlugin, MethodCallHandler
       poiMap.put("name",item.getTitle());
       poiMap.put("parkingType",item.getParkingType());
       poiMap.put("pcode",item.getProvinceCode());
+      poiMap.put("province", item.getProvinceName())
       pois.add(poiMap);
     }
     resultCallback.success(pois);
